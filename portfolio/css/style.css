@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -144,6 +145,7 @@ body {
     background-color: #BDAE82;
     text-decoration: none;
     transition: all .5s;
+    cursor: pointer;
 }
 
 .hero-btn:hover {
@@ -247,6 +249,7 @@ body {
     padding: 8px 70px;
     cursor: pointer;
     transition: all .5s;
+    cursor: pointer;
 }
 
 .portfolio-btn:hover {
@@ -348,6 +351,7 @@ body {
     padding: 8px 39px;
     margin: 40px 0 43px 0;
     transition: all .5s;
+    cursor: pointer;
 }
 
 .price-item__btn:hover {
@@ -419,6 +423,7 @@ body {
     color: #000000;
     padding: 8px 39px;
     transition: all .5s;
+    cursor: pointer;
 }
 
 .contacts-info__btn:hover {
