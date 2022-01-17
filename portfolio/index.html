@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link type="image/x-icon" href="images/favicon.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="images/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
@@ -26,27 +28,27 @@
               </button>
               <ul class="menu-list">
                 <li class="menu-item">
-                  <a class="menu-item__link" href="#">
+                  <a class="menu-item__link" href="#skills">
                     Skills
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a class="menu-item__link" href="#">
+                  <a class="menu-item__link" href="#portfolio">
                     Portfolio
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a class="menu-item__link" href="#">
+                  <a class="menu-item__link" href="#video">
                     Video
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a class="menu-item__link" href="#">
+                  <a class="menu-item__link" href="#price">
                     Price
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a class="menu-item__link" href="#">
+                  <a class="menu-item__link" href="#contacts">
                     Contacts
                   </a>
                 </li>
@@ -61,7 +63,7 @@
         </div>
         </header>
         <main class="main">
-            <section class="hero">
+            <section id="hero" class="hero">
                 <div class="container">
                   <div class="hero-inner">
                 <div class="hero-content">
@@ -78,7 +80,7 @@
               </div>
             </div>
             </section>
-            <section class="skills">
+            <section id="skills" class="skills">
                 <div class="container">
                   <h2 class="skills-title title">
                     Skills
@@ -123,7 +125,7 @@
                   </div>
                 </div>
               </section>
-              <section class="portfolio">
+              <section id="portfolio" class="portfolio">
                 <div class="container">
                   <h2 class="portfolio-title title">
                     Portfolio
@@ -172,7 +174,7 @@
                   </ul>
                 </div>
               </section>
-              <section class="video">
+              <section id="video" class="video">
                 <div class="container">
                   <h2 class="video-title title">
                     Video
@@ -188,7 +190,7 @@
                   </div>
                 </div>
               </section>
-              <section class="price">
+              <section id="price" class="price">
                 <div class="container">
                   <h2 class="price-title title">
                     Price
@@ -233,7 +235,7 @@
                   </div>
                 </div>
               </section>
-              <section class="contacts">
+              <section id="contacts" class="contacts">
                 <div class="container">
                   <div class="contacts-inner">
                     <form class="contacts-form" action="#">
@@ -241,8 +243,8 @@
                         Contact me
                       </h2>
                         <div class="contacts-info__label">
-                            <input class="contacts-info__input" type="text" placeholder="NAME" required="">
-                            <input class="contacts-info__input" type="text" placeholder="EMAIL" required="">
+                            <input class="contacts-info__input" type="tel" placeholder="NAME" required="">
+                            <input class="contacts-info__input" type="email" placeholder="EMAIL" required="">
                         </div>
                         <textarea class="contacts-info__textarea" placeholder="MESSAGE"></textarea>
                         <button class="contacts-info__btn" type="submit">Send message</button>
