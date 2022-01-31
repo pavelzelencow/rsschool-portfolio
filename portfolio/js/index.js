@@ -1,3 +1,11 @@
+const langBtn = document.querySelector('.menu-btn__lang');
+
+langBtn.addEventListener('click', activeFunc);
+
+function activeFunc() {
+  langBtn.classList.toggle('active')
+}
+  
   let x = document.querySelector(".menu-btn");
 
 x.addEventListener("click", myFunction);
@@ -142,21 +150,15 @@ const i18Obj = {
 
 const ru = document.querySelector('.ru');
 const en = document.querySelector('.en');
+const translateText = document.querySelectorAll('[data-i18]');
 
-function getTranslate(langs){
-  const text = document.querySelectorAll("[data-i18]")
-  text.forEach(item => {
-    item.testContent = i18Obj[langs][item.dataset.i18]
-    item.placeholder = i18Obj[langs][item.dataset.i18]
-    console.log(langs, cl0b);
-  })
-}
+function getTranslate(lang){
+  translateText.forEach((element) => element.textContent = i18Obj[lang][element.dataset.i18])
+};
+ 
+ru.addEventListener('click', () => getTranslate('ru'));
+en.addEventListener('click', () => getTranslate('en'));
 
-ru.addEventListener('click', (event) =>{
-  langs = event.target.dataset.ru;
-  if (event.target.classList.contains('menu-btn__lang')){
-    getTranslate(langs)
-  }
-});
+
 
 
