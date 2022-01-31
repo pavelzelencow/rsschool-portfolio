@@ -21,8 +21,22 @@ body {
     line-height: 40px;
     font-family: 'Inter', sans-serif;
     font-weight: normal;
-    background-color: #000;
+    background-color: var(--main-bg);
     color: #fff;;
+}
+
+:root {
+    --main-bg: #000;
+    --text: #fff;
+    --title: #bdae82;
+    --toggle-bg: url(../images/black.svg); 
+}
+
+:root[data-theme='white'] {
+    --main-bg: #fff;
+    --text: #000;
+    --title: #000;
+    --toggle-bg: url(../images/white.svg); 
 }
 
 .main {
@@ -109,6 +123,29 @@ body {
     color: #BDAE82;
 }
 
+.menu-btn__theme {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all .5s;
+    background-image: var(--toggle-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+/* .menu-btn__theme-img path {
+    transition: all .5s;
+} */
+
+.menu-btn__theme-img path:hover {
+    fill: #BDAE82;
+}
+
 .hero {
     position: relative;
 }
@@ -148,12 +185,9 @@ body {
     padding: 15px 72px;
     background-color: #BDAE82;
     text-decoration: none;
-    transition: all .5s;
+    transition: all .8s ease 0s;
     cursor: pointer;
-}
-
-.hero-btn:hover {
-    color: #ffffff;
+    position: relative;
 }
 
 .skills {
@@ -167,7 +201,7 @@ body {
     font-size: 40px;
     line-height: 80px;
     text-align: center;
-    color: #BDAE82;
+    color: var(--title);
     margin-bottom: 60px;
     position: relative;
 }
@@ -178,7 +212,7 @@ body {
     position: absolute;
     width: 274px;
     height: 2px;
-    background-color: #BDAE82;
+    background-color: var(--title);
     top: 40px;
 }
 
@@ -209,6 +243,7 @@ body {
 .skills-item__title {
     font-weight: bold;
     margin-bottom: 20px;
+    color: var(--text);
 }
 
 .skills-descr {
@@ -216,6 +251,7 @@ body {
     line-height: 36px;
     letter-spacing: 1.1px;
     margin-bottom: 10px;
+    color: var(--text);
 }
 
 .portfolio{
@@ -228,7 +264,7 @@ body {
     position: absolute;
     width: 242px;
     height: 2px;
-    background-color: #BDAE82;
+    background-color: var(--title);
     top: 40px;
 }
 
@@ -244,7 +280,7 @@ body {
 }
 .portfolio-btn {
     border: 2px solid #BDAE82;
-    color: #BDAE82;
+    color: var(--title);
     background-color: inherit;
     font-size: 20px;
     line-height: 40px;
@@ -257,7 +293,7 @@ body {
 
 .portfolio-btn:hover {
     background-color: #BDAE82;
-    color: #000;
+    color: var(--main-bg);
 }
 
 .portfolio-list {
@@ -329,6 +365,7 @@ body {
     line-height: 56px;
     font-weight: bold;
     margin: 43px 0 20px 0;
+    color: var(--text);
 }
 .price-item__price {
     font-family: 'Merriweather', serif;
@@ -342,6 +379,7 @@ body {
     width: 100%;
     font-size: 18px;
     line-height: 36px;
+    color: var(--text);
 }
 
 .price-item__btn {
@@ -435,6 +473,7 @@ body {
 
 .footer {
     padding: 50px 20px;
+    color: var(--text);
 }
 
 .footer-content {
@@ -482,7 +521,7 @@ body {
 
 .footer-social__img path{
     transition: all .5s;
-    fill: #fff;
+    fill: var(--text);
 }
 
 .footer-social__img path:hover {
@@ -760,6 +799,9 @@ body {
 @media (max-width: 620px) {
     .menu-list {
         left: 0;
+    }
+    .menu-btn__theme {
+        margin-left: 5px;
     }
     .hero-inner {
         background-position: right;
